@@ -42,9 +42,11 @@ const Grid = (props) => {
 
 	return (
 		<div className={styles.gridContainer}>
-			{images.map((image) => (
-				<GridItem key={image.date} {...image} />
-			))}
+			{
+				images.length > 0 ? images.map((image) => (
+					<GridItem key={image.date} {...image} />
+				)) : <div className={styles.textAlignCenter}>No images found</div>
+			}
 		</div>
 	)
 }
