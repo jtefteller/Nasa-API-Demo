@@ -1,0 +1,106 @@
+:root {
+	--text-color: #FFFFFF;
+	--background-color: #000000;
+	--item-background-color: #c4cdd332;
+	--border-color: #0478BE;
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.wrapper {
+	min-width: 100%;
+	min-height: 100vh;
+	color: var(--text-color);
+	background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+
+}
+
+.mainContainer {
+	max-width: 1500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+
+	background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+	-moz-animation:move-twink-back 200s linear infinite;
+	-ms-animation:move-twink-back 200s linear infinite;
+	-o-animation:move-twink-back 200s linear infinite;
+	-webkit-animation:move-twink-back 200s linear infinite;
+	animation:move-twink-back 200s linear infinite;
+}
+
+.controlsContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	background-color: var(--item-background-color);
+	border: solid var(--border-color) 5px;
+	padding: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	min-width: 50%;
+	border-radius: 1rem;
+}
+.controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.textAlignCenter {
+	text-align: center;
+	margin: 5px;
+}
+
+input {
+	all: unset;
+	background-color: var(--background-color) !important;
+	padding: 5px;
+	color: var(--border-color) !important;
+	font-weight: 600;
+	border-radius: .5rem;
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+
+.gridItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid var(--border-color) 5px;
+	margin: 5px;
+	padding: 10px;
+	background-color: var(--item-background-color);
+	border-radius: 1rem;
+	/* justify-content: center; */
+}
+.gridItem > img {
+	max-height: 500px;
+	max-width: 600px;
+}
+
+.explanation {
+	margin-top: 10px;
+}
