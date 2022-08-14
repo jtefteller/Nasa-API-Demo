@@ -11,4 +11,4 @@ Set the key in the .env file as REACT_APP_APIKEY = `<Your key goes here>`
   
 `npm run start` - for the development env
   
-`npm build` - for the the test env
+`npm build` - for the the production env
